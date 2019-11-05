@@ -1,0 +1,24 @@
+<div id="seImagesSlider" class="se-images-slider" [style.width]="width +'px'" [style.height]="height +'px'">
+    <div class="images-container" [style.width]="width * images.length + 'px'" [style.left]="'-' + sliderPosition + 'px'">
+        <div *ngFor="let image of images" class="single-image" [style.width]="width +'px'" [style.height]="height +'px'">
+            <img [style.max-height]="'100%'" [style.max-width]="'100%'" [src]="image" alt="">
+        </div>
+    </div>
+    <div class="images-thumbs">
+        <div class="slider-btn-container back" (click)="moveSlider('back')">
+            <svg id="back-chev" enable-background="new 0 0 551.13 551.13" height="15" viewBox="0 0 551.13 551.13" width="15" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="m189.451 275.565 223.897-223.897v-51.668l-275.565 275.565 275.565 275.565v-51.668z"/></svg>
+        </div>
+        <div class="slider-btn-container next" (click)="moveSlider('next')">
+            <svg id="next-chev" enable-background="new 0 0 551.13 551.13" height="15" viewBox="0 0 551.13 551.13" width="15" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="m361.679 275.565-223.896 223.897v51.668l275.565-275.565-275.565-275.565v51.668z"/></svg>
+        </div>
+        <div #wrapper class="thumbs-wrapper">
+            <div class="thumbs-container" [style.width]="100 * images.length + 'px'" [style.left]="thumbsLeft(wrapper.offsetWidth)">
+                <div *ngFor="let image of images; let i = index" class="single-thumb" (click)="selectThumb(i + 1)" [ngClass]="{'selected': ( (i + 1) == counter)}">
+                        <img [style.max-height]="'90%'" [style.max-width]="'100%'" [src]="image" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

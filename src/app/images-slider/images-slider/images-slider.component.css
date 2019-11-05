@@ -1,0 +1,113 @@
+#seImagesSlider {
+    box-sizing: border-box;
+    position:relative;
+    display:inline-block;
+    padding:10px;
+    overflow:hidden;
+}
+#seImagesSlider:hover .images-thumbs {
+    visibility: visible
+}
+#seImagesSlider .images-container {
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    transition:all .4s ease-in-out;
+}
+#seImagesSlider .images-container .single-image {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#seImagesSlider .images-container .single-image .example-image {
+    box-sizing: border-box;
+    background-color:#333;
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+}
+#seImagesSlider #back-chev,
+#seImagesSlider #next-chev {
+    position: absolute;
+    z-index:5;
+    cursor:pointer;
+}
+#seImagesSlider .images-thumbs {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:20%;
+    background-color:rgba(0,0,0,.4);
+    transition:all .3s ease-in-out;
+    visibility: hidden;
+}
+#seImagesSlider .images-thumbs .slider-btn-container {
+    position: absolute;
+    height:100%;
+    width:20px;
+    width: 33px;
+}
+#seImagesSlider .images-thumbs .slider-btn-container.next {
+    right:0;
+}
+#seImagesSlider .images-thumbs .slider-btn-container:hover {
+    background-color:rgba(0,0,0,.45);
+    cursor: pointer;
+}
+#seImagesSlider #back-chev {
+    bottom:calc(50% - 7.5px);
+    left:10px;
+}
+#seImagesSlider #next-chev {
+    bottom:calc(50% - 7.5px);
+    right:10px;
+}
+#seImagesSlider .images-thumbs .thumbs-wrapper {
+    position: absolute;
+    width:calc(100% - 66px);
+    left:33px;
+    overflow:hidden;
+    height:100%;
+
+}
+#seImagesSlider .images-thumbs .thumbs-wrapper .thumbs-container {
+    position: absolute;
+    height:100%;
+    left:0;
+    top:0;
+    transition:left .4s ease-in-out;
+}
+#seImagesSlider .images-thumbs .thumbs-wrapper .thumbs-container .single-thumb {
+    box-sizing:border-box;
+    width:100px;
+    height:100%;
+    padding:10px;
+    padding-top: 14px;
+    display:inline-block;
+    text-align:center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+#seImagesSlider .images-thumbs .thumbs-wrapper .thumbs-container .single-thumb.selected {
+    background-color:rgba(0,0,0,.45);
+}
