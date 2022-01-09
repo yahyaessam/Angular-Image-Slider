@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { ChatBotModule } from './chat-bot';
 import { ImagesSliderModule } from './images-slider/images-slider.module';
 
 
@@ -12,7 +10,6 @@ import { ImagesSliderModule } from './images-slider/images-slider.module';
   ],
   imports: [
     BrowserModule,
-    ChatBotModule,
     ImagesSliderModule
 
   ],

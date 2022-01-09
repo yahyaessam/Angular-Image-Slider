@@ -1,4 +1,14 @@
 swiper {
-    height: 300px;
-    width: 400px;
-  }
+  height: 300px;
+  width: 400px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
