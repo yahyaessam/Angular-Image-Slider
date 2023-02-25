@@ -17,8 +17,9 @@ after clone the project
 * `width` : this should be a number of pixels ( optional it will be 700px default width)
 * `images` : array of strings with images urls
 
+[Live Preview](https://yahyaessam.github.io/Angular-Image-Slider/)
 ## Credits
-Developed By Yahya Essam.
+Developed By [Yahya Essam](https://github.com/yahyaessam)
 
 
 
